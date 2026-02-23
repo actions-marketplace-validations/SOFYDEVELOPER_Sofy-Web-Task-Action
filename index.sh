@@ -4,9 +4,4 @@ echo "Project ID "${project_id}""
 
 curl --location "https://public.sofy.ai/webagent-service/public/prompt/execute" \
 --header "x-sofy-web-auth-key: ${subscription_key}" \
---data '{
-  "prompt_id": "'"${prompt_id}"'",
-  "prompt": "'"${prompt}"'",
-  "project_id": "'"${project_id}"'"
-
-}'
+--header "Content-Type: application/json" \
