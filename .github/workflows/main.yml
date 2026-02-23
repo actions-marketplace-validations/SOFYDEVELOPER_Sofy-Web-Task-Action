@@ -1,0 +1,15 @@
+on: [push]
+
+jobs:  
+  Uploading-job:  
+    name: 'Upload build on Sofy'
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'checkout'
+        uses: 'actions/checkout@v2'
+      - name: 'Upload build'
+        env:
+          project_id: '69773c4d1749de90bd7b6bb4'
+          subscription_key: F0D2B9BF-930D-486B-B3A4-348AAF8902FE
+          prompt: open sofy.ai. Go to login page
+        uses: 'SOFYDEVELOPER/sofy-app-upload-github-action@main'        
