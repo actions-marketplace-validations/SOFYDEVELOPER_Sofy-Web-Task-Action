@@ -104,12 +104,3 @@ Valid Sofy project_id
 Valid subscription_key
 
 Either prompt or prompt_id
-
-## Best Practices
-
-Store your subscription_key inside GitHub Secrets instead of hardcoding it:
-
-with:
-  project_id: ${{ secrets.SOFY_PROJECT_ID }}
-  subscription_key: ${{ secrets.SOFY_SUBSCRIPTION_KEY }}
-  prompt: 'Open sofy.ai and go to login page'
